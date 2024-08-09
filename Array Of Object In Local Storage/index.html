@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Local Storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crud Local Storage</h1>
+
+        <form id="dataform">
+
+            <label for="nameinput">Name</label>
+            <input type="text" id="nameinput" required/>
+
+            <label for="ageinput">Age</label>
+            <input type="text" id="ageinput" required/>
+             
+            <label for="gender">Select</label>
+            <select name="" id="genderselect">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <button type="submit">Add Data</button>
+        </form>
+       
+        <div id="output">
+            <h2>Stored Data</h2>
+            <table id="datatable" >
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="datalist">
+
+                     
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+     
+    <div class="model">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h2>Edit Data</h2>
+            <form id="editform">
+                  
+                <input type="hidden"  id="editIndex">
+
+                <label for="editNameinput">Name</label>
+                <input type="text" id="editNameinput" required/>
+    
+                <label for="editAgeinput">Age</label>
+                <input type="text" id="editAgeinput" required/>
+                 
+                <label for="editGenderselect">Select</label>
+                <select name="" id="editGenderselect">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+    
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="object.js"></script>
+</body>
+</html>
